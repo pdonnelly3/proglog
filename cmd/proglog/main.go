@@ -147,11 +147,14 @@ func (c *cli) setupConfig(cmd *cobra.Command, args []string) error {
 
 func (c *cli) run(cmd *cobra.Command, args []string) error {
 	var err error
+	log.Println("run")
+	log.Println(c.cfg.Config)
 	agent, err := agent.New(c.cfg.Config)
 	if err != nil {
 		return err
 	}
 
+	log.Println("Agent created")
 	sigc := make(chan os.Signal, 1)
 	signal.Notify(sigc, syscall.SIGINT, syscall.SIGTERM)
 	<-sigc

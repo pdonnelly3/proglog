@@ -1,6 +1,3 @@
-# Default values for proglog.
-# This is a YAML-formatted file.
-# Declare variables to be passed into your templates.
 image:
   repository: github.com/pdonnelly3/proglog
   pullPolicy: IfNotPresent

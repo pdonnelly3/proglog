@@ -42,7 +42,7 @@ type Config struct {
 }
 
 func (m *Membership) setupSerf() (err error) {
-	addr, err := net.ResolveTCPAddr("tcp", m.BindAddr)
+	addr, err := net.ResolveTCPAddr("tcp", m.Config.BindAddr)
 	if err != nil {
 		return err
 	}

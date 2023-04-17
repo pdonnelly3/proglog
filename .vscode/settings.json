@@ -1,0 +1,13 @@
+{
+    "go.editorContextMenuCommands": {
+        "testFile": true,
+        "testPackage": true,
+        "generateTestForFile": true,
+        "generateTestForPackage": true
+    },
+    "go.lintOnSave": "package",
+    "gopls": { "ui.semanticTokens": true },
+    "[go]": {
+        "editor.formatOnSave": true
+    },
+}
